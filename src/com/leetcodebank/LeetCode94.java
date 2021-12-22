@@ -5,8 +5,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 
-public class LeetCode144 {
-
+public class LeetCode94 {
     public class TreeNode {
         int val;
         TreeNode left;
@@ -23,44 +22,41 @@ public class LeetCode144 {
         }
     }
 
-    List<Integer> result = new ArrayList<>();
-
-    //递归解题思路
-    public List<Integer> preorderTraversal(TreeNode root) {
-        if (root == null) {
-            return result;
-        }
-        result.add(root.val);
-        preOrder(root.left);
-        preOrder(root.right);
-        return null;
-    }
-
-    public void preOrder(TreeNode root) {
-        if (root == null) {
-            return;
-        }
-        result.add(root.val);
-        preOrder(root.left);
-        preOrder(root.right);
-    }
-
-    //迭代解题思路
-    public List<Integer> preorderTraversalwithStack(TreeNode root) {
-        List<Integer> ret = new ArrayList<>();
+    //递归解法
+    List<Integer> ret = new ArrayList<>();
+    public List<Integer> inorderTraversal(TreeNode root) {
         if (root == null) {
             return ret;
         }
+        inOrder(root.left);
+        ret.add(root.val);
+        inOrder(root.right);
+        return ret;
+    }
+
+    public void inOrder(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        inOrder(root.left);
+        ret.add(root.val);
+        inOrder(root.right);
+    }
+
+    //迭代解法
+    public List<Integer> inorderTraversalwithStack(TreeNode root) {
+        List<Integer> ret = new ArrayList<>();
         Deque<TreeNode> stack = new LinkedList<>();
-        while (!stack.isEmpty() || root != null) {
+        while (root != null || !stack.isEmpty()) {
             while (root != null) {
-                ret.add(root.val);
                 stack.push(root);
                 root = root.left;
             }
             root = stack.pop();
+            ret.add(root.val);
             root = root.right;
         }
         return ret;
     }
+
 }
