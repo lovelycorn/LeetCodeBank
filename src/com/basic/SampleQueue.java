@@ -1,9 +1,9 @@
-package com.leetcodebank;
+package com.basic;
 
 import java.util.Deque;
 import java.util.LinkedList;
 
-public class QueueSample {
+public class SampleQueue {
     public static void main(String[] args) {
         //声明队列
         //Queue<Integer> queue = new LinkedList<>();

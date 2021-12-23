@@ -1,4 +1,4 @@
-package com.leetcodebank;
+package com.basic;
 
 public class MultiArray {
     private static void printArray(int[][] a) {

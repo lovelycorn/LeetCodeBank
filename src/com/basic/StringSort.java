@@ -1,4 +1,4 @@
-package com.leetcodebank;
+package com.basic;
 
 import java.util.ArrayList;
 import java.util.Collections;

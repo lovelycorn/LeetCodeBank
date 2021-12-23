@@ -1,4 +1,4 @@
-package com.leetcodebank;
+package com.basic;
 
 public class BinarySearch {
     public static void main(String[] args) {

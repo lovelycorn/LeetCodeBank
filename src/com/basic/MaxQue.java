@@ -1,4 +1,4 @@
-package com.leetcodebank;
+package com.basic;
 
 public class MaxQue {
     int value;

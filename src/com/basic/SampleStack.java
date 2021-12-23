@@ -1,8 +1,8 @@
-package com.leetcodebank;
+package com.basic;
 
 import java.util.Stack;
 
-public class StackSample {
+public class SampleStack {
     public static void main(String[] args) {
         Stack<Integer> stack = new Stack<>();
         //进栈
